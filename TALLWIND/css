@@ -1,0 +1,152 @@
+/* ================================
+   MotoPower — Dark Premium Racing
+   Estilo Elegante (Oswald + Montserrat)
+   ================================ */
+
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap');
+
+/* Variables de Tema */
+:root {
+  --racing-red: #e50914;
+  --racing-red-hover: #ff1a2e;
+  --dark-bg: #0a0a0a;
+  --dark-secondary: #1a1a1a;
+  --light-text: #d1d1d1;
+  --radius: 8px;
+}
+
+.light-mode {
+  --dark-bg: #f0f0f0;
+  --dark-secondary: #ffffff;
+  --light-text: #1a1a1a;
+  --racing-red: #c80010;
+  --racing-red-hover: #e6001a;
+}
+
+/* Body General */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Titulares estilo Racing */
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* NAVBAR */
+header {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.15);
+}
+
+header nav a {
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: var(--racing-red) !important;
+}
+
+/* Botón modo oscuro/claro */
+#modoOscuro {
+  background-color: var(--racing-red) !important;
+  border-radius: var(--radius);
+  transition: 0.3s ease;
+}
+
+#modoOscuro:hover {
+  background-color: var(--racing-red-hover) !important;
+}
+
+/* HERO */
+#inicio {
+  position: relative;
+}
+
+#inicio h2 {
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+}
+
+#inicio p {
+  font-size: 1.1rem;
+}
+
+/* Tarjetas de Motos */
+#motos h2 {
+  color: var(--racing-red);
+}
+
+.tarjeta-moto {
+  background-color: var(--dark-secondary);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: 0.35s ease;
+  border: 1px solid transparent;
+}
+
+.tarjeta-moto:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.35);
+}
+
+.tarjeta-moto img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Características */
+#caracteristicas div {
+  border-radius: var(--radius);
+  transition: 0.3s ease;
+}
+
+#caracteristicas div:hover {
+  background-color: rgba(255, 0, 0, 0.12);
+}
+
+/* FORMULARIO */
+form {
+  background-color: var(--dark-secondary) !important;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+form input,
+form textarea {
+  background: #111 !important;
+  color: var(--light-text);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--racing-red);
+}
+
+form button {
+  background-color: var(--racing-red) !important;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--racing-red-hover) !important;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  border-top: 1px solid rgba(255, 0, 0, 0.2);
+}
