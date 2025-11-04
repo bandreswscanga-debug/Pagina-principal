@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotoPower — Superbikes de Alto Rendimiento</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-900 font-sans transition-colors duration-300">
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-black/80 text-white fixed top-0 left-0 w-full z-50 backdrop-blur-md shadow-md">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xxl font-bold text-red-600 tracking-wide">🏍️ MotoPower</h1>
+
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="#inicio" class="hover:text-red-500 transition">Inicio</a></li>
+        <li><a href="#motos" class="hover:text-red-500 transition">Catálogo</a></li>
+        <li><a href="#caracteristicas" class="hover:text-red-500 transition">Ventajas</a></li>
+        <li><a href="#contacto" class="hover:text-red-500 transition">Contacto</a></li>
+      </ul>
+
+      <!-- Botón de modo oscuro -->
+      <button id="modoOscuro" class="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+<section id="inicio" class="relative w-full h-screen flex items-center justify-center text-center text-white overflow-hidden">
+  <!-- Asegúrate de que la imagen esté dentro de /img y tenga el nombre correcto -->
+  <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 hero-slide"
+       <div style="background-image: url('https://i.pinimg.com/736x/df/b9/65/dfb9659d48e1cb93811e8da60ff21679.jpg');">
+</div>
+  </div>
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 px-4">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-red-500 drop-shadow-lg">Domina la carretera</h2>
+    <p class="mt-4 text-gray-200 text-lg max-w-xl mx-auto">
+      Las mejores motos de alto cilindraje del mercado. Potencia, tecnología y diseño en un solo rugido.
+    </p>
+    <a href="#motos" class="mt-8 inline-block bg-red-600 px-8 py-3 rounded-md hover:bg-red-700 text-lg transition">
+      Explorar
+    </a>
+  </div>
+</section>
+
+  <!-- ================= CATÁLOGO ================= -->
+  <section id="motos" class="max-w-7xl mx-auto py-16 px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Catálogo de Motos</h2>
+    <div id="listaMotos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- ================= CARACTERÍSTICAS ================= -->
+  <section id="caracteristicas" class="bg-gray-900 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
+        <h3 class="text-2xl font-semibold text-red-500 mb-2">Velocidad y Precisión</h3>
+        <p class="text-gray-300">Motores con más de 200 HP, diseñados para dominar la pista y la ciudad.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
+        <h3 class="text-2xl font-semibold text-red-500 mb-2">Diseño Futurista</h3>
+        <p class="text-gray-300">Líneas aerodinámicas y materiales premium inspirados en la ingeniería de competición.</p>
+      </div>
+      <div class="p-6 rounded-lg bg-gray-800 hover:bg-gray-700 transition">
+        <h3 class="text-2xl font-semibold text-red-500 mb-2">Tecnología Avanzada</h3>
+        <p class="text-gray-300">Control de tracción, modos de conducción y conectividad digital inteligente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="bg-white py-16 px-6 shadow-inner">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Contáctanos</h2>
+    <form id="formulario" class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg shadow">
+      <input type="text" id="nombre" placeholder="Tu nombre" class="w-full p-2 mb-4 border rounded-md" required />
+      <input type="email" id="correo" placeholder="Tu correo" class="w-full p-2 mb-4 border rounded-md" required />
+      <textarea id="mensaje" rows="4" placeholder="Tu mensaje" class="w-full p-2 mb-4 border rounded-md" required></textarea>
+      <button type="submit" class="w-full bg-red-600 text-white p-2 rounded-md hover:bg-red-700 transition">
+        Enviar mensaje
+      </button>
+    </form>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black text-gray-400 text-center py-6 mt-12">
+    <p>© <span id="year"></span> MotoPower. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
